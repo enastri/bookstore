@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>test</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+<header>
+<h2>Header</h2>
+</header>
+
+<main>
+<p>Submission Form</p>
+
+<div id="formErrors">
+    
+</div>
+
+<form id="user">
+    <label for="email">E-Mail:</label><br>
+    <input type="text" id="email" name="email" required><br>
+
+    <label for="fname">Όνομα:</label><br>
+    <input type="text" id="fname" name="fname" required><br>
+
+    <label for="lname">Επώνυμο:</label><br>
+    <input type="text" id="lname" name="lname" required><br>
+
+    <label for="role">Ρόλος Χρήστη:</label><br>
+    <input type="radio" id="admin" name="role" required>
+    <label for="admin">Administrator</label><br>
+    <input type="radio" id="customer" name="role" required>
+    <label for="customer">Πελάτης</label><br>
+
+
+    <label for="passwd">Κωδικός:</label><br>
+    <input type="text" id="passwd" name="passwd" required><br>
+
+    <label for="passwd_confirm">Επιβεβαίωση Κωδικού:</label><br>
+    <input type="text" id="passwd_confirm" name="passwd_confirm" required><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</main>
+
+<script src="../js/validation.js"></script>
+<footer>
+<div class="contact-info">
+    <p>Χαρά Γλυνάτση<br>
+        Αριθμός Μητρώου: 3210040
+    </p>
+</div>
+<div class="contact-info">
+    <p>Πολύβιος Τσίτσος<br>
+        Αριθμός Μητρώου: 3170163
+    </p>
+</div>
+</footer>
