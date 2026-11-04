@@ -18,7 +18,7 @@
 
 <form id="user">
     <label for="email">E-Mail:</label><br>
-    <input type="text" id="email" name="email" required><br>
+    <input type="email" id="email" name="email" required><br>
 
     <label for="fname">Όνομα:</label><br>
     <input type="text" id="fname" name="fname" required><br>
@@ -34,10 +34,13 @@
 
 
     <label for="passwd">Κωδικός:</label><br>
-    <input type="text" id="passwd" name="passwd" required><br>
+    <input type="password" id="passwd" name="passwd" required><br>
 
     <label for="passwd_confirm">Επιβεβαίωση Κωδικού:</label><br>
-    <input type="text" id="passwd_confirm" name="passwd_confirm" required><br>
+    <input type="password" id="passwd_confirm" name="passwd_confirm" required><br>
+    
+    <label for="show_password">Εμφάνιση Κωδικού:</label><br>
+    <input type="checkbox" id="show_password" name="show_password" onclick="ShowPassword()"><br>
 
     <input type="submit" value="Submit">
 </form>

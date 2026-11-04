@@ -33,3 +33,15 @@ function validateLastName() {
         errorDiv.textContent = "Όλα σωστά!"
     }
 }
+
+function ShowPassword() {
+    let x = document.getElementById("passwd");
+    let y = document.getElementById("passwd_confirm");
+    if (x.type === "password"){
+        x.type = "text";
+        y.type = "text";
+    } else {
+        x.type ="password";
+        y.type ="password";
+    }
+}
