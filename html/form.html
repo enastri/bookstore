@@ -12,38 +12,46 @@
 <main>
 <p>Submission Form</p>
 
-<div id="formErrors">
-    
+<div class="form_and_side">
+    <form id="user">
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="fname">Όνομα:</label><br>
+        <input type="text" id="fname" name="fname" required><br>
+
+        <label for="lname">Επώνυμο:</label><br>
+        <input type="text" id="lname" name="lname" required><br>
+
+        <label for="role">Ρόλος Χρήστη:</label><br>
+        <input type="radio" id="admin" name="role" required>
+        <label for="admin">Administrator</label><br>
+        <input type="radio" id="customer" name="role" required>
+        <label for="customer">Πελάτης</label><br>
+
+
+        <label for="passwd">Κωδικός:</label><br>
+        <input type="password" id="passwd" name="passwd" required><br>
+
+        <label for="passwd_confirm">Επιβεβαίωση Κωδικού:</label><br>
+        <input type="password" id="passwd_confirm" name="passwd_confirm" required><br>
+        
+        <label for="show_password">Εμφάνιση Κωδικού:</label><br>
+        <input type="checkbox" id="show_password" name="show_password" onclick="showPassword()"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div class="validation_box" id="user_form_infobox">
+        <div id="all_clear"><p>Όλα σωστά!</p></div>
+        <div id="email_error"><p>Το email δεν είναι σωστό.</p></div>
+        <div id="fname_error"><p>Το όνομα δεν είναι σωστό.</p></div>
+        <div id="lname_error"><p>Το επώνυμο δεν είναι σωστό.</p></div>
+        <div id="passwd_error"><p>Ο κωδικός είναι λανθασμένος. Ένας σωστός κωδικός πρέπει να περιέχει έναν κεφαλαίο χαρακτήρα, έναν πεζό χαρακτήρα, έναν αριθμό, έναν ειδικό χαρακτήρα (!@#$%^&*), και να έχει μήκος τουλάχιστον 8 χαρακτήρες.</p></div>
+        <div id="passwd_match_error"><p>Οι κωδικοί δεν ταιριάζουν.</p></div>
+    </div>
 </div>
 
-<form id="user">
-    <label for="email">E-Mail:</label><br>
-    <input type="email" id="email" name="email" required><br>
 
-    <label for="fname">Όνομα:</label><br>
-    <input type="text" id="fname" name="fname" required><br>
-
-    <label for="lname">Επώνυμο:</label><br>
-    <input type="text" id="lname" name="lname" required><br>
-
-    <label for="role">Ρόλος Χρήστη:</label><br>
-    <input type="radio" id="admin" name="role" required>
-    <label for="admin">Administrator</label><br>
-    <input type="radio" id="customer" name="role" required>
-    <label for="customer">Πελάτης</label><br>
-
-
-    <label for="passwd">Κωδικός:</label><br>
-    <input type="password" id="passwd" name="passwd" required><br>
-
-    <label for="passwd_confirm">Επιβεβαίωση Κωδικού:</label><br>
-    <input type="password" id="passwd_confirm" name="passwd_confirm" required><br>
-    
-    <label for="show_password">Εμφάνιση Κωδικού:</label><br>
-    <input type="checkbox" id="show_password" name="show_password" onclick="showPassword()"><br>
-
-    <input type="submit" value="Submit">
-</form>
 
 </main>
 

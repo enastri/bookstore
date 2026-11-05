@@ -71,3 +71,18 @@ button {
 button:hover {
     background-color: rgb(44, 44, 44);
 }
+
+.form_and_side {
+    display: flex;
+    gap: 5rem;
+}
+
+.validation_box {
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(200, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 20rem;
+    color: white;
+}
