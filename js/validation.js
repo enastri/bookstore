@@ -108,6 +108,54 @@ function showPassword() {
     }
 }
 
+const storageKey = "bookstoreUsers";
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    validateEMail();
+    validateFirstName();
+    validateLastName();
+    validatePassword();
+    checkPasswordsMatching();
+
+    const roleInput = form.querySelector('input[name="role"]:checked');
+
+    if (
+        !emailValid ||
+        !fnameValid ||
+        !lnameValid ||
+        !passwdValid ||
+        !passwdMatchValid ||
+        !roleInput
+    ) {
+        return;
+    }
+
+    const users = JSON.parse(localStorage.getItem(storageKey) || "[]");
+
+    const user = {
+        email: form["email"].value.trim(),
+        firstName: form["fname"].value.trim(),
+        lastName: form["lname"].value.trim(),
+        role: roleInput.value
+    };
+
+    users.push(user);
+    localStorage.setItem(storageKey, JSON.stringify(users));
+
+    form.reset();
+    errorInfobox.hidden = true;
+
+    alert("Ο χρήστης αποθηκεύτηκε επιτυχώς.");
+})
+
+
+
+
+
+
+
 function updateInfobox() {
     errorInfobox.hidden = false;
     let allClear = true;

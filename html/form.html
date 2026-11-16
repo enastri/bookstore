@@ -24,9 +24,9 @@
         <input type="text" id="lname" name="lname" required><br>
 
         <label for="role">Ρόλος Χρήστη:</label><br>
-        <input type="radio" id="admin" name="role" required>
+        <input type="radio" id="admin" name="role" value="Administrator"  required>
         <label for="admin">Administrator</label><br>
-        <input type="radio" id="customer" name="role" required>
+        <input type="radio" id="customer" name="role" value="Customer" required>
         <label for="customer">Πελάτης</label><br>
 
 
@@ -48,11 +48,12 @@
         <div id="lname_error"><p>Το επώνυμο δεν είναι σωστό.</p></div>
         <div id="passwd_error"><p>Ο κωδικός είναι λανθασμένος. Ένας σωστός κωδικός πρέπει να περιέχει έναν κεφαλαίο χαρακτήρα, έναν πεζό χαρακτήρα, έναν αριθμό, έναν ειδικό χαρακτήρα (!@#$%^&*), και να έχει μήκος τουλάχιστον 8 χαρακτήρες.</p></div>
         <div id="passwd_match_error"><p>Οι κωδικοί δεν ταιριάζουν.</p></div>
+      
     </div>
 </div>
 
 
-
+<a href="users.html">Χρήστες</a>
 </main>
 
 <script src="../js/validation.js"></script>
