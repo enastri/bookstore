@@ -15,7 +15,12 @@
         <a href="form.html">Προσθήκη Χρήστη</a>
 
         <p>
-             <input type="text" id="user_search" onkeyup="userSearch()" placeholder="Search..">
+            <select id="search_criterion">
+                <option value="fname">Όνομα</option>
+                <option value="lname">Επώνυμο</option>
+                <option value="email">E-Mail</option>
+            </select>
+            <input type="text" id="user_search" onkeyup="userSearch()" placeholder="Search..">
         </p>
 
         <table id="users_table">

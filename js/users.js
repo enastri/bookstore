@@ -31,8 +31,24 @@ function userSearch() {
     var filter = input.value.toUpperCase();
     var tr = table.getElementsByTagName("tr");
 
+    var searchCriterionSelect = document.getElementById("search_criterion");
+    var criterion = searchCriterionSelect.value;
+    var column;
+    
+    switch (criterion) {
+        case "fname":
+            column = 1;
+            break;
+        case "lname":
+            column = 2;
+            break;
+        case "email":
+            column = 0;
+            break;
+    }
+
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
+        td = tr[i].getElementsByTagName("td")[column];
         if (td) {
             var txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
