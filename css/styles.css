@@ -86,3 +86,15 @@ button:hover {
     min-width: 20rem;
     color: white;
 }
+
+table, th, td {
+    border: 1px solid black;
+    justify-content: center;
+    text-align: center;
+    padding: 0.2em;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
